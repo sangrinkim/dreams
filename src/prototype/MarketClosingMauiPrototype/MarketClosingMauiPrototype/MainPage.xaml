@@ -6,6 +6,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
@@ -13,6 +14,53 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
+
+        <HorizontalStackLayout Grid.Row="0" Grid.Column="0"
+                               Margin="20" Spacing="10">
+            <Label Text="At close: " VerticalOptions="Center" />
+            <DatePicker />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="1" Grid.Column="0">
+            <VerticalStackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <HorizontalStackLayout Grid.Row="0" Grid.Column="0">
+                        <Label Text="Dow" VerticalOptions="Center" />
+                        <Entry Placeholder="Enter Dow" />
+                        <Label Text="S&amp;P 500" VerticalOptions="Center" />
+                        <Entry Placeholder="Enter S&amp;P 500" />
+                        <Label Text="Nasdaq" VerticalOptions="Center" />
+                        <Entry Placeholder="Enter Nasdaq" />
+                        <Label Text="10Y Bond" VerticalOptions="Center" />
+                        <Entry Placeholder="Enter 10Y Bond" />
+                        <Label Text="VIX" VerticalOptions="Center" />
+                        <Entry Placeholder="Enter VIX" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Grid.Row="1" Grid.Column="0">
+                        <Label Text="KOSPI" VerticalOptions="Center" />
+                        <Entry Placeholder="Enter KOSPI" />
+                        <Label Text="KOSDAQ" VerticalOptions="Center" />
+                        <Entry Placeholder="Enter KOSDAQ" />
+                        <Label Text="KRW/USD" VerticalOptions="Center" />
+                        <Entry Placeholder="Enter KRW/USD" />
+                    </HorizontalStackLayout>
+                </Grid>
+
+                <Label Text="Global issue" VerticalOptions="Center" />
+                <Entry Placeholder="Enter issue" />
+                <ListView />
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
 
     </Grid>
 
