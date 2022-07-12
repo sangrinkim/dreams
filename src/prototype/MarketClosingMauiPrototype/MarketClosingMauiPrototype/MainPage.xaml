@@ -21,10 +21,13 @@
             <DatePicker />
         </HorizontalStackLayout>
 
-        <HorizontalStackLayout Grid.Row="1" Grid.Column="0">
+        <HorizontalStackLayout Grid.Row="1" Grid.Column="0"
+                               Margin="20, 0, 0, 0">
             <VerticalStackLayout>
                 <Grid>
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
@@ -54,11 +57,16 @@
                         <Label Text="KRW/USD" VerticalOptions="Center" />
                         <Entry Placeholder="Enter KRW/USD" />
                     </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Grid.Row="2" Grid.Column="0">
+                        <Label Text="Global issue" VerticalOptions="Center" />
+                        <Entry Placeholder="Enter issue" />
+                        
+                    </HorizontalStackLayout>
+
+                    <ListView Grid.Row="3" Grid.Column="0" />
                 </Grid>
 
-                <Label Text="Global issue" VerticalOptions="Center" />
-                <Entry Placeholder="Enter issue" />
-                <ListView />
             </VerticalStackLayout>
         </HorizontalStackLayout>
 
